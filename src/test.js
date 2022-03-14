@@ -9,7 +9,8 @@ inquirer.prompt(
     message:"Answer the prompts based on your role that is worthy to the organization",
     QUESTION:[
         {
-            type: '__ID__' , 
+            //type: '__ID__' ,
+            type: 'list' ,
             choice:[ __Employee__ , __Engineer__ , __Manager__ , __Intern__],
             message: "What is your identity in the company?"
         },

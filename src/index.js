@@ -1,4 +1,9 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+const __Engineer__ = require('../lib/__Engineer__');
+const __Intern__ = require('../lib/__Intern__');
+const __Manager__ = require('../lib/__Manager__');
+const genHtmlPage = require('../src/genHtmlPage');
 //!QUESTIONS
 inquirer.registerPrompt("loop" , require("inquirer-loop")(inquirer));
 
