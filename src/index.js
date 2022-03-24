@@ -30,9 +30,33 @@ inquirer.prompt(
 
 
 
-//ask the user quesitons
-
-// manager office number
+//!ask the manager quesitons
+const __Manager__QUESTIONS = [
+    //!what is the managers NAME?
+    {
+        type: 'input',
+        name: '',
+        message: '',
+    },
+    //!what is the managers ID?
+    {
+        type: '',
+        name: '__MANAGER____ID__',
+        message: 'The Manager ID is: ',
+    },
+    //!what is the managers EMAIL?
+    {
+        type: 'input',
+        name: '__MANAGER____EMAIL__',
+        message: 'The managers EMAIL is:',
+    },
+        //!what is the managers OFFICE NUMBER?
+    {
+        type: 'number',
+        name: '__MANAGER__',
+        message: 'What is the Managers OFFICE NUMBER?',
+    }
+]
 
 // engineer has a github
 
