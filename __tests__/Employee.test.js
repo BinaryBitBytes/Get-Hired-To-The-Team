@@ -4,7 +4,7 @@ const __Employee__ = require('../lib/__Employee__.js');
 import { TestWatcher } from "jest";
 import { } from "./"; // importing a function from a  file
 
-test(//!"write in a statement about a test here",
+test(//!"write in a statement about a test here, as a arroy of data objects to test.",
     ()=>{
         //arrange a test
         const input = [ //creating a const value for object array
@@ -17,8 +17,12 @@ test(//!"write in a statement about a test here",
         //act on the test
         const actualValue = nameExtractor(input);
 
-        //assertion  
-        //! toEqual()-->deep equality comparitson
-        //! toBe()--> simple data types for equality
+        //assertion  and MATCHER functions
+        //! .toBeDefined()--> verify a variable is not UNDEFINED *usually checked first*
+        //! .toEqual()-->deep equality comparitson
+        //! .toBe()--> simple data types for equality
+        //! .toBeTruthy()--> used to verify is true or is false
+        //! .not --> verif if another matcher has an opposite result is true
+        //! .toContain()--> verify that an item contains an array and that if some items are not in array
         expect(actualValue).toEqual(expectedOutput)
     });
