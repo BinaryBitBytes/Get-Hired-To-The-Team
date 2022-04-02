@@ -9,9 +9,9 @@ describe('describing the employee', () => {
 
     it('employees name', () => {
         console.log(`The employees name is ${nameTest}.`);
-        if( ){
-
-        } else ( )
+        if(__Employee__.__Name__ == nameTest ){
+            console.log('The employee does have a passing name.')
+        } else ('The employee does not have a name')
     });
 
     it('employees role', () => {
