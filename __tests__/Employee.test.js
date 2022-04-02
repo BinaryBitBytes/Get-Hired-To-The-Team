@@ -1,9 +1,19 @@
 // This is a gucci comment about importing the employee class from the library folder and the file __Employee__.js
+const __Employee__ = require('../lib/__Employee__.js');
+
+describe('describing the employee', () => {
+    const nameTest = "Waldo";
+    
+})
+
+
+
+
+
 
 //const __Employee__ = require('../lib/__Employee__.js');
-
 //import { TestWatcher } from "jest";
-import {__Employee__ } from "'../lib/__Employee__.js'"; // importing a function from a  file
+/*import {__Employee__ } from "'../lib/__Employee__.js'"; // importing a function from a  file
 
 test(//!"write in a statement about a test here, as a arroy of data objects to test.",
     ()=>{
@@ -28,4 +38,4 @@ test(//!"write in a statement about a test here, as a arroy of data objects to t
         expect(actualValue).toEqual(expectedOutput){
 
         }
-    });
+    }); */
