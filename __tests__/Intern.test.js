@@ -19,7 +19,7 @@ DESCRIBE('describing the intern',() =>{
 });
 
 
-
+/*
 const Intern = require("../lib/Intern");
 
 test("Can set school via constructor", () => {
@@ -28,3 +28,4 @@ test("Can set school via constructor", () => {
   expect(e.school).toBe(testValue);
 });
 
+*/

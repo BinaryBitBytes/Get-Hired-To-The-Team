@@ -3,8 +3,31 @@ const __Employee__ = require('../lib/__Employee__.js');
 
 describe('describing the employee', () => {
     const nameTest = "Waldo";
-    
-})
+    const roleTest = "Manager";
+    const emailTest = "Waldo@man.com";
+    const employeeTest = new __Employee__(nameTest, 1 ,emailTest, roleTest);
+
+    it('employees name', () => {
+        console.log(`The employees name is ${nameTest}.`);
+        if( ){
+
+        } else ( )
+    });
+
+    it('employees role', () => {
+        console.log(`The employees role is ${roleTest}.`);
+        if( __Employee__.__getRole__ == roleTest){
+            console.log('The employee does have a passing role')
+        } else ('The employee does not have a role.' )
+    });
+
+    it('employees email', () =>{
+        console.log(`The employees email is ${emailTest}.`);
+        if( __Employee__.__Email__ == emailTest ){
+            console.log('The employee does have a passing email.')
+        } else ('The employee does not have a email.')
+    });
+});
 
 
 

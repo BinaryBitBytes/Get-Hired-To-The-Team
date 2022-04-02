@@ -1,4 +1,3 @@
-const { INET } = require('sequelize/types');
 const { DESCRIBE } = require('sequelize/types/query-types');
 const __Employee__ = require('../lib/__Employee__');
 const __Engineer__ = require('../lib__Engineer__');
