@@ -5,6 +5,7 @@ const __Intern__ = require("../lib/__Intern__");
 const __Manager__ = require("../lib/__Manager__");
 const __Employee__ = require("../lib/__Employee__");
 const genHtmlPage = require("../src/genHtmlPage");
+const Start = require("./lib/__Employee__");
 //!QUESTIONS
 inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
 
@@ -169,4 +170,8 @@ function Employee(name, id, email, officeNumber) {
   employee_one.getEmail();
 }
 
-function __ask__() {}
+function __ask__() {};
+
+const start = new Start();
+
+start.play();

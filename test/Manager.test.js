@@ -9,7 +9,7 @@ describe('describing the manager', () => {
         console.log(`The managers office number is ${testOfficeNumber}`);
         if(){
 
-        } else()
+        } else( 
     });
 
     //TODO: getRole()—overridden to return 'Manager'
