@@ -1,9 +1,18 @@
+//Importing employee model
+const __Employee__ = require("./lib/__Employee__");
+// Initialize the inquirer object with inquirer for
+// asking employee questions to new employees
+const EMPLOYEE = new __Employee__();
+//Start asking
+__Employee__.hire();
+
+//Original code below, might be in wrong file here
 const inquirer = require("inquirer");
+//might migrate this code to other files
 const fs = require("fs");
-const __Engineer__ = require("../lib/__Engineer__");
-const __Intern__ = require("../lib/__Intern__");
-const __Manager__ = require("../lib/__Manager__");
-const __Employee__ = require("../lib/__Employee__");
+const __Engineer__ = require("./lib/__Engineer__");
+const __Intern__ = require("./lib/__Intern__");
+const __Manager__ = require("./lib/__Manager__");
 const genHtmlPage = require("../src/genHtmlPage");
 const Start = require("./lib/__Employee__");
 //!QUESTIONS
