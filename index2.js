@@ -2,7 +2,24 @@
 const __Employee__ = require("./lib/__Employee__");
 // Initialize the inquirer object with inquirer for
 // asking employee questions to new employees
-const EMPLOYEE = new __Employee__();
+let EMPLOYEE = {
+  //TODO: name
+  name: "Will",
+  //TODO: id
+  id: __Intern__,
+  //TODO : email
+  email: "WillBFly@salt.com",
+  //TODO : office Number
+  officeNumber: 115,
+  //TODO : github
+  gitHub: "FlapJackPackets",
+  //TODO : school
+  school: "Texas Tech",
+};
+const employee = new EMPLOYEE();
+const engineer = new Engineer();
+const intern = new Intern();
+const manager = new Manager();
 //Start asking
 __Employee__.hire();
 
@@ -25,13 +42,14 @@ inquirer.prompt({
     "Answer the prompts based on your role that is worthy to the organization",
   QUESTION: [
     {
-      type: "__ID__",
+      type: "input",
+      name: "__ID__",
       choice: [__Employee__, __Engineer__, __Manager__, __Intern__],
       message: "What is your identity in the company?",
     },
     {
-      type: "__Name__",
-      name: "BBB",
+      type: "input",
+      name: "__Name__",
       message: "What is your name budd-eh?",
     },
   ],
@@ -42,7 +60,7 @@ const __Manager__QUESTIONS = [
   //!what is the managers NAME?
   {
     type: "input",
-    name: "",
+    name: "__MANAGER____NAME__",
     message: "Enter the managers name",
   },
   //!what is the managers ID?
@@ -65,16 +83,7 @@ const __Manager__QUESTIONS = [
   },
 ];
 
-// engineer has a github
 
-// intern has school
-
-// get role()
-
-//Using Contructor to create a object for team members with the following properties
-//properties:
-
-//The first class is an TeamMember parent class with the following properties and methods:
 
 //TODO: getRole()—returns 'TeamMember'*/
 
@@ -91,17 +100,6 @@ function __TeamMember__(__Name__, __ID__) {
     console.log(`Hello. I am ${this.__Name__} and my role ${this.__ID__}`);
   };
 }
-
-/*
-const __Manager__ = new __TeamMember__(false, `Welcome aboard ${__TeamMember__.__Name__}! Your role in the organization is ${__ID__}.`);
-console.log(__Manager__);
-const __Employee__ = new __TeamMember__(false, `Welcome aboard ${__TeamMember__.__Name__}! Your role in the organization is ${__ID__}.`);
-console.log(__Employee__);
-const __Engineer__ = new __TeamMember__(true, `Welcome aboard ${__TeamMember__.__Name__}! Your role in the organization is ${__ID__}.`);
-console.log(__Engineer__);
-const __Intern__ = new __TeamMember__(false, `Welcome aboard ${__TeamMember__.__Name__}! Your role in the organization is ${__ID__}.`);
-console.log(__Intern__);
-*/
 __Engineer__.__isEngineer__();
 __Intern__.__isEngineer__();
 
@@ -110,11 +108,11 @@ const __WelcomeAboard__ = (
   __Intern__,
   __Employee__,
   __Manager__
-) => {
-  if (
+  ) => {
+    if (
     __Engineer__.__isEngineer__ === true &&
     __Intern__.__isEngineer__ === true
-  )
+    )
     console.log(
       `${__Engineer__.__Name__} & ${__Intern__.Name__} Welcome Abourd to the program!`
     ); //if both engineers and interns from the __TeamMember__ parent class is called //!! if both are TRUE
@@ -128,20 +126,6 @@ const _allEmployees_ = [0, 1, 2, 3];
 _allEmployees_.forEach((num) => console.log(num));
 
 //Creating a String Prototype
-const employee = {
-  //TODO: name
-  name: "Will",
-  //TODO: id
-  id: __Intern__,
-  //TODO : email
-  email: "WillBFly@salt.com",
-  //TODO : office Number
-  officeNumber: 115,
-  //TODO : github
-  gitHub: "FlapJackPackets",
-  //TODO : school
-  school: "Texas Tech",
-};
 
 console.log(`${employee.name.toUpperCase()} is a ${employee.id.toUpperCase()} and
 has an email of ${employee.email.toUpperCase()}.`);
@@ -159,13 +143,13 @@ function Employee(name, id, email, officeNumber) {
     __Engineer__,
     "PhilUpQwickly@salt.com",
     117
-  );
-  //TODO: getName()
-  newEmployee.prototype.getName = function () {
-    console.log(`${this.name} has joined the organization.`);
-  };
-  employee_one.getName();
-  //TODO: getId()
+    );
+    //TODO: getName()
+    newEmployee.prototype.getName = function () {
+      console.log(`${this.name} has joined the organization.`);
+    };
+    employee_one.getName();
+    //TODO: getId()
   newEmployee.prototype.getId = function () {
     console.log(`${this.name} is a ${this.id}.`);
   };
@@ -174,13 +158,28 @@ function Employee(name, id, email, officeNumber) {
   newEmployee.prototype.getEmail = function () {
     console.log(
       `${this.name}, you can reach them at this email: ${this.email}.`
-    );
-  };
-  employee_one.getEmail();
-}
+      );
+    };
+    employee_one.getEmail();
+  }
+  
+  const init = () => {
+    prompt()
+    .then((response) =>fs.writeFileSync('index.html', genHtmlPage(response)) )
+    .then(() =>console.log('Successfully wrote to index.html'))
+  .catch((error) => console.error(error));
+};
 
-function __ask__() {};
+init();
 
-const start = new Start();
+__ask__ = () => __Manager__QUESTIONS;
 
-start.play();
+const start = new Start(__ask__)
+
+start.play(start);
+
+// Start hiring
+employee.play();
+engineer.play();
+intern.play();
+manager.play();

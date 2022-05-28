@@ -7,16 +7,18 @@ describe('describing the manager', () => {
     //TODO: officeNumber
     It('managers office number', () => {
         console.log(`The managers office number is ${testOfficeNumber}`);
-        if(){
-
-        } else( 
+        if(managerTest){
+            return testOfficeNumber;
+        } else(console.log(
+            'The manager does not have an office number.'
+        ))
     });
 
     //TODO: getRole()—overridden to return 'Manager'
     it('managers role', () =>{
         console.log(`The role of this employee is ${testRole}`);
-        if(){
-
+        if(managerTest){
+            testRole;
         } else ('The managers role is invalid')
     });
 });
